@@ -59,6 +59,15 @@ Returns ``True`` if any element of sequence is true.
     False
 
 
+Function ``=divmod``
+''''''''''''''''
+
+Returns tuple containing quotient and remainder of two numbers, using integer division.
+
+   >>> dicteval({"=divmod": [5, 2]})
+   (2, 1)
+
+
 Function ``=eq``
 ''''''''''''''''
 

@@ -22,6 +22,10 @@ class BuiltinLanguage(LanguageSpecification):
     def function_all(self, value, evaluator, context):
         return all(evaluator(v, context) for v in value)
 
+    def function_divmod(self, value, evaluator, context):
+        numer, denom = [evaluator(v, context) for v in value[0:2]]
+        return divmod(numer, denom)
+
     def function_eq(self, value, evaluator, context):
         value = [evaluator(v, context) for v in value]
         return not value or value.count(value[0]) == len(value)
